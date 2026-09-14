@@ -1,0 +1,427 @@
+.page {
+  /* clip horizontal bleed only — overflow:hidden breaks sticky principles */
+  overflow-x: clip;
+  background: #000;
+  color: #fff;
+}
+
+.storySection {
+  position: relative;
+  z-index: 25;
+  /* Pull up over DigitalExperienceBanner — same breakpoints as our-work listing */
+  margin-top: -150px;
+  overflow: visible;
+  /* Transparent so banner shows behind (like our-work project grid) */
+  padding: clamp(88px, 6.771vw, 130px) clamp(20px, 11.17vw, 214px) clamp(110px, 11vw, 210px);
+  background: transparent;
+}
+
+@media (min-width: 640px) {
+  .storySection {
+    margin-top: -165px;
+  }
+}
+
+@media (min-width: 768px) {
+  .storySection {
+    margin-top: -270px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .storySection {
+    margin-top: -300px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .storySection {
+    margin-top: -354px;
+  }
+}
+
+@media (max-width: 760px) {
+  .storySection {
+    margin-top: -150px;
+    /* Match our-work mobile: tight top pad so -top pull-up is visible */
+    padding: 16px 16px 56px;
+  }
+}
+
+.banner {
+  position: relative;
+  z-index: 1;
+}
+
+.storyInner {
+  width: min(1491px, 100%);
+}
+
+.storyTitle {
+  margin: 0 0 clamp(14px, 1.25vw, 24px);
+  font-family: var(--font-graphik), var(--font-inter), sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+@media (min-width: 640px) {
+  .storyTitle {
+    font-size: 32px;
+    line-height: 1.35;
+  }
+}
+
+@media (min-width: 768px) {
+  .storyTitle {
+    font-size: 50px;
+    line-height: 1.4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .storyTitle {
+    font-size: 65px;
+    line-height: 1.35;
+  }
+}
+
+@media (min-width: 1280px) {
+  .storyTitle {
+    font-size: 80px;
+    line-height: 1.3;
+  }
+}
+
+.storyLead {
+  max-width: 52rem;
+  margin: 0 0 clamp(18px, 1.8vw, 28px);
+  color: #fff;
+  font-family: var(--font-inter);
+  font-size: clamp(17px, 1.25vw, 24px);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.022em;
+}
+
+.storyBody {
+  max-width: 52rem;
+  margin: 0;
+  color: #b4b4b4;
+  font-family: var(--font-inter);
+  font-size: clamp(16px, 1.15vw, 22px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+.visionMission {
+  position: relative;
+  width: min(1491px, 100%);
+  min-height: clamp(520px, 40vw, 720px);
+  margin: clamp(180px, 18vw, 340px) 0 0;
+  padding: 0;
+}
+
+.vision,
+.mission {
+  position: absolute;
+  width: min(754px, 50.6%);
+}
+
+.vision {
+  left: 0;
+  top: 0;
+  text-align: right;
+}
+
+.mission {
+  right: 0;
+  top: clamp(260px, 22vw, 400px);
+  text-align: left;
+}
+
+.splitTitle {
+  margin: 0 0 clamp(12px, 1vw, 18px);
+  font-family: var(--font-inter);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .splitTitle {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+}
+
+@media (min-width: 768px) {
+  .splitTitle {
+    font-size: 36px;
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 1024px) {
+  .splitTitle {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 1280px) {
+  .splitTitle {
+    font-size: 60px;
+    line-height: 1.2;
+  }
+}
+
+.splitText {
+  margin: 0;
+  color: #b4b4b4;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .splitText {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 768px) {
+  .splitText {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 1024px) {
+  .splitText {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 1280px) {
+  .splitText {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+}
+
+.showcaseWrap {
+  position: relative;
+  background: #000;
+}
+
+.showcaseWrap :global(section) {
+  padding-top: 0;
+}
+
+.principles {
+  position: relative;
+  padding: clamp(90px, 10vw, 190px) clamp(20px, 7vw, 160px) clamp(110px, 12vw, 220px);
+  background: #000;
+}
+
+.principlesInner {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(320px, 0.75fr);
+  gap: clamp(44px, 9vw, 170px);
+  align-items: start;
+  width: min(1540px, 100%);
+  margin: 0 auto;
+}
+
+.principlesSticky {
+  position: sticky;
+  top: clamp(96px, 12vh, 140px);
+  align-self: start;
+}
+
+.principlesTitle {
+  margin: 0;
+  font-family: var(--font-graphik), var(--font-inter), sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+}
+
+@media (min-width: 640px) {
+  .principlesTitle {
+    font-size: 32px;
+    line-height: 1.35;
+  }
+}
+
+@media (min-width: 768px) {
+  .principlesTitle {
+    font-size: 50px;
+    line-height: 1.4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .principlesTitle {
+    font-size: 65px;
+    line-height: 1.35;
+  }
+}
+
+@media (min-width: 1280px) {
+  .principlesTitle {
+    font-size: 80px;
+    line-height: 1.3;
+  }
+}
+
+.principlesList {
+  display: grid;
+  gap: clamp(20px, 2.55vw, 49px);
+}
+
+.principleCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: clamp(180px, 13vw, 260px);
+  padding: clamp(24px, 1.8vw, 36px);
+  border: 1px solid rgba(255, 255, 255, 0.33);
+  border-radius: 19px;
+  background: #010908;
+}
+
+.principleCard h3 {
+  margin: 0;
+  font-family: var(--font-inter);
+  font-size: clamp(21px, 1.563vw, 30px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.principleCard p {
+  max-width: 460px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.79);
+  font-family: var(--font-inter);
+  font-size: clamp(16px, 1.146vw, 22px);
+  font-weight: 300;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.proofSection {
+  background: #fff;
+  color: #1a1a1a;
+}
+
+.testimonialBand {
+  padding: clamp(36px, 4vw, 64px) 0 0;
+}
+
+.logoGridSection {
+  padding: clamp(42px, 5vw, 80px) clamp(20px, 7vw, 160px) clamp(82px, 9vw, 160px);
+  background: #fff;
+}
+
+.logoGrid {
+  display: grid;
+  /* minmax(0, 1fr) lets columns shrink on laptop widths instead of
+     overflowing from a 140px floor (same treatment as mobile-app). */
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(28px, 2vw, 40px) clamp(40px, 4vw, 72px);
+  align-items: center;
+  width: min(1510px, 100%);
+  margin: 0 auto;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: clamp(88px, 8.5vw, 140px);
+  background: #fff;
+}
+
+.logoItem img {
+  max-width: min(100%, clamp(180px, 18vw, 280px));
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .principlesInner {
+    grid-template-columns: 1fr;
+  }
+
+  .visionMission {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(48px, 10vw, 100px);
+    min-height: 0;
+    margin-top: clamp(72px, 12vw, 160px);
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .vision,
+  .mission {
+    position: static;
+    width: 100%;
+    max-width: 40rem;
+    text-align: left;
+  }
+
+  .principlesSticky {
+    position: static;
+  }
+
+  .logoGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .visionMission {
+    gap: 40px;
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  .storySection,
+  .principles,
+  .logoGridSection {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .logoGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 28px;
+  }
+
+  .logoItem {
+    min-height: clamp(64px, 12vw, 92px);
+  }
+
+  .logoItem img {
+    max-width: min(100%, clamp(120px, 28vw, 170px));
+    max-height: 100%;
+  }
+}

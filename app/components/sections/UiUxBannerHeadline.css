@@ -1,0 +1,108 @@
+.ui-ux-hero {
+  --ui-ux-watermark-top: min(9.5833vw, 17.2285vh);
+  --ui-ux-watermark-size: min(13.0208vw, 23.4082vh);
+  --ui-ux-watermark-line: min(13.817vw, 24.8395vh);
+  --ui-ux-watermark-gap: min(8.3333vw, 14.9813vh);
+  --ui-ux-card-left: min(1353px, 70.4688vw);
+  --ui-ux-card-top: min(698px, 36.3542vw);
+  --ui-ux-card-w: min(486px, 25.3125vw);
+  --ui-ux-card-pad-top: min(27px, 1.4063vw);
+  --ui-ux-card-pad-right: min(36px, 1.875vw);
+  --ui-ux-card-pad-bottom: min(48px, 2.5vw);
+  --ui-ux-card-pad-left: min(29px, 1.5104vw);
+  --ui-ux-card-radius: min(20px, 1.0417vw);
+  --ui-ux-card-copy-top: min(28px, 1.4583vw);
+  --ui-ux-card-font: min(20px, 1.0417vw);
+  --ui-ux-card-line: min(30px, 1.5625vw);
+  --ui-ux-card-x: 0px;
+  --ui-ux-card-y: 0px;
+}
+
+.ui-ux-hero-copy {
+  z-index: 1;
+}
+
+.ui-ux-hero-copy-front {
+  z-index: 3;
+}
+
+.ui-ux-hero-watermark {
+  margin: 0;
+  max-width: none;
+  color: rgba(255, 255, 255, 0.05);
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.ui-ux-hero-card {
+  z-index: 4;
+}
+
+.ui-ux-hero-card-inner {
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(129, 112, 112, 0.07);
+  -webkit-backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(7.5px);
+}
+
+.ui-ux-hero-card-mark {
+  display: block;
+  width: min(14.083px, 0.7335vw);
+  height: min(14.083px, 0.7335vw);
+  max-width: none;
+}
+
+.ui-ux-hero-card-text {
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .ui-ux-hero {
+    height: 100dvh !important;
+    min-height: 100dvh;
+    --ui-ux-watermark-top: 6.5rem;
+    --ui-ux-watermark-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --ui-ux-watermark-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --ui-ux-watermark-gap: 1.25rem;
+    --ui-ux-card-left: auto;
+    --ui-ux-card-top: auto;
+    --ui-ux-card-w: min(27rem, calc(100vw - 2.5rem));
+    --ui-ux-card-pad-top: 1.35rem;
+    --ui-ux-card-pad-right: 1.45rem;
+    --ui-ux-card-pad-bottom: 2rem;
+    --ui-ux-card-pad-left: 1.45rem;
+    --ui-ux-card-radius: 1.1rem;
+    --ui-ux-card-copy-top: 1rem;
+    --ui-ux-card-font: clamp(14px, 2.2vw, 18px);
+    --ui-ux-card-line: 1.45;
+  }
+
+  .ui-ux-hero-card {
+    right: 1.25rem;
+    bottom: 1.5rem;
+  }
+
+  .ui-ux-hero-card-mark {
+    height: 14px;
+    width: 14px;
+  }
+}
+
+@media (max-width: 639px) {
+  .ui-ux-hero {
+    --ui-ux-watermark-top: 6.5rem;
+    --ui-ux-watermark-size: clamp(1.3rem, 6.6vw, 1.85rem);
+    --ui-ux-card-left: 50%;
+    --ui-ux-card-x: -50%;
+    --ui-ux-card-w: min(21.5rem, calc(100vw - 1.5rem));
+    --ui-ux-card-font: clamp(13px, 3.8vw, 15px);
+  }
+
+  .ui-ux-hero-card {
+    right: auto;
+    bottom: 1rem;
+  }
+}

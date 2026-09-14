@@ -1,0 +1,134 @@
+.fmcg-hero {
+  --fmcg-watermark-top: min(5.5833vw, 17.2285vh);
+  --fmcg-watermark-size: min(13.0208vw, 23.4082vh);
+  --fmcg-watermark-line: min(13.817vw, 24.8395vh);
+  --fmcg-watermark-gap: min(8.3333vw, 14.9813vh);
+  /* Figma: x=1220, y=555 in a 1920 × 1068 banner. */
+  --fmcg-card-left: auto;
+  --fmcg-card-top: 51.9663%;
+  --fmcg-card-w: min(25.4167vw, 45.6929vh);
+  --fmcg-card-pad-top: min(1.4063vw, 2.5281vh);
+  --fmcg-card-pad-right: min(1.875vw, 3.3708vh);
+  --fmcg-card-pad-bottom: min(2.5vw, 4.4944vh);
+  --fmcg-card-pad-left: min(1.5104vw, 2.7154vh);
+  --fmcg-card-radius: min(1.0417vw, 1.8727vh);
+  --fmcg-card-copy-top: min(1.4583vw, 2.6217vh);
+  --fmcg-card-font: min(1.0417vw, 1.8727vh);
+  --fmcg-card-line: min(1.5625vw, 2.809vh);
+  --fmcg-card-x: 0px;
+  --fmcg-card-y: 0px;
+}
+
+.fmcg-hero-copy {
+  z-index: 1;
+}
+
+.fmcg-hero-copy-front {
+  z-index: 3;
+}
+
+.fmcg-hero-watermark {
+  margin: 0;
+  max-width: none;
+  color: rgba(255, 255, 255, 0.05);
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.fmcg-hero-card {
+  right: 11.0417%;
+  z-index: 4;
+}
+
+.fmcg-hero-card-inner {
+  display: grid;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(129, 112, 112, 0.07);
+  -webkit-backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(7.5px);
+}
+
+.fmcg-hero-card-mark {
+  grid-area: 1 / 1;
+  display: block;
+  width: min(0.7335vw, 1.3186vh);
+  height: min(0.7335vw, 1.3186vh);
+  max-width: none;
+}
+
+.fmcg-hero-card-text {
+  grid-area: 1 / 1;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+  max-width: 100%;
+  letter-spacing: 0;
+}
+
+.fmcg-hero .fmcg-hero-fg {
+  inset: 0 auto 0 0;
+  width: min(65.8333vw, 118.3521vh);
+  height: 100%;
+}
+
+.fmcg-hero .fmcg-hero-fg img {
+  object-position: left center;
+}
+
+@media (max-width: 1024px) {
+  .fmcg-hero {
+    height: 100dvh !important;
+    min-height: 100dvh;
+    --fmcg-watermark-top: 6.5rem;
+    --fmcg-watermark-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --fmcg-watermark-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --fmcg-watermark-gap: 1.25rem;
+    --fmcg-card-left: auto;
+    --fmcg-card-top: auto;
+    --fmcg-card-w: min(27rem, calc(100vw - 2.5rem));
+    --fmcg-card-pad-top: 1.35rem;
+    --fmcg-card-pad-right: 1.45rem;
+    --fmcg-card-pad-bottom: 2rem;
+    --fmcg-card-pad-left: 1.45rem;
+    --fmcg-card-radius: 1.1rem;
+    --fmcg-card-copy-top: 1rem;
+    --fmcg-card-font: clamp(14px, 2.2vw, 18px);
+    --fmcg-card-line: 1.45;
+  }
+
+  .fmcg-hero-card {
+    right: 1.25rem;
+    bottom: 1.5rem;
+  }
+
+  .fmcg-hero-card-mark {
+    height: 14px;
+    width: 14px;
+  }
+
+  .fmcg-hero .fmcg-hero-fg {
+    width: min(44rem, 82vw);
+  }
+}
+
+@media (max-width: 639px) {
+  .fmcg-hero {
+    --fmcg-watermark-top: 6.5rem;
+    --fmcg-watermark-size: clamp(1.3rem, 6.6vw, 1.85rem);
+    --fmcg-card-left: 50%;
+    --fmcg-card-x: -50%;
+    --fmcg-card-w: min(21.5rem, calc(100vw - 1.5rem));
+    --fmcg-card-font: clamp(13px, 3.8vw, 15px);
+  }
+
+  .fmcg-hero-card {
+    right: auto;
+    bottom: 1rem;
+  }
+
+  .fmcg-hero .fmcg-hero-fg {
+    width: min(33rem, 98vw);
+  }
+}

@@ -1,0 +1,102 @@
+.technology-hero {
+  --technology-watermark-top: min(5.5833vw, 17.2285vh);
+  --technology-watermark-size: min(13.0208vw, 23.4082vh);
+  --technology-watermark-line: min(13.817vw, 24.8395vh);
+  --technology-watermark-gap: min(8.3333vw, 14.9813vh);
+  --technology-card-left: min(79px, 4.1146vw);
+  --technology-card-top: min(587px, 30.5729vw);
+  --technology-card-w: min(486px, 25.3125vw);
+  --technology-card-pad-top: min(27px, 1.4063vw);
+  --technology-card-pad-right: min(36px, 1.875vw);
+  --technology-card-pad-bottom: min(48px, 2.5vw);
+  --technology-card-pad-left: min(29px, 1.5104vw);
+  --technology-card-radius: min(20px, 1.0417vw);
+  --technology-card-copy-top: min(28px, 1.4583vw);
+  --technology-card-font: min(20px, 1.0417vw);
+  --technology-card-line: min(30px, 1.5625vw);
+  --technology-card-x: 0px;
+  --technology-card-y: 0px;
+}
+
+.technology-hero-copy {
+  z-index: 1;
+}
+
+.technology-hero-watermark {
+  margin: 0;
+  max-width: none;
+  color: rgba(255, 255, 255, 0.05);
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.technology-hero-card {
+  z-index: 3;
+}
+
+.technology-hero-card-inner {
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(129, 112, 112, 0.07);
+  -webkit-backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(7.5px);
+}
+
+.technology-hero-card-mark {
+  display: block;
+  width: min(14.083px, 0.7335vw);
+  height: min(14.083px, 0.7335vw);
+  max-width: none;
+}
+
+.technology-hero-card-text {
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .technology-hero {
+    height: 100dvh !important;
+    min-height: 100dvh;
+    --technology-watermark-top: 6.5rem;
+    --technology-watermark-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --technology-watermark-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --technology-watermark-gap: 1.25rem;
+    --technology-card-left: 1.25rem;
+    --technology-card-top: auto;
+    --technology-card-w: min(27rem, calc(100vw - 2.5rem));
+    --technology-card-pad-top: 1.35rem;
+    --technology-card-pad-right: 1.45rem;
+    --technology-card-pad-bottom: 2rem;
+    --technology-card-pad-left: 1.45rem;
+    --technology-card-radius: 1.1rem;
+    --technology-card-copy-top: 1rem;
+    --technology-card-font: clamp(14px, 2.2vw, 18px);
+    --technology-card-line: 1.45;
+  }
+
+  .technology-hero-card {
+    bottom: 1.5rem;
+  }
+
+  .technology-hero-card-mark {
+    height: 14px;
+    width: 14px;
+  }
+}
+
+@media (max-width: 639px) {
+  .technology-hero {
+    --technology-watermark-top: 6.5rem;
+    --technology-watermark-size: clamp(1.3rem, 6.6vw, 1.85rem);
+    --technology-card-left: 50%;
+    --technology-card-x: -50%;
+    --technology-card-w: min(21.5rem, calc(100vw - 1.5rem));
+    --technology-card-font: clamp(13px, 3.8vw, 15px);
+  }
+
+  .technology-hero-card {
+    bottom: 1rem;
+  }
+}

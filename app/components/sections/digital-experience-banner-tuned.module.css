@@ -1,0 +1,55 @@
+/* Tuned banner: mobile height + spacing; decorative BG scaled like blog detail */
+
+.tunedBanner {
+  min-height: clamp(520px, 145vw, 720px) !important;
+}
+
+@media (max-width: 767px) {
+  .tunedBanner :global(.digital-experience-banner-content) {
+    padding-top: clamp(140px, 36vw, 220px) !important;
+  }
+}
+
+/*
+ * Below 1280 (tablet → small desktop): same placement as ≥1280,
+ * scaled by viewport / 1280.
+ * XL reference: 1364 × 2200, top -520, left -120
+ */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .tunedBanner {
+    min-height: clamp(720px, 90vw, 1000px) !important;
+  }
+
+  .tunedBanner :global(.vector-background) {
+    width: calc(1364 * 100vw / 1280) !important;
+    height: calc(2200 * 100vw / 1280) !important;
+    top: calc(-490 * 100vw / 1280) !important;
+    left: calc(-60 * 100vw / 1280) !important;
+  }
+
+  .tunedBanner :global(.vector-background img) {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+}
+
+/* ≥1280: decorative placement */
+@media (min-width: 1280px) {
+  .tunedBanner {
+    min-height: clamp(900px, 90vw, 1180px) !important;
+  }
+
+  .tunedBanner :global(.vector-background) {
+    width: 1364px !important;
+    height: 2200px !important;
+    top: -490px !important;
+    left: 0px !important;
+  }
+
+  .tunedBanner :global(.vector-background img) {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+}

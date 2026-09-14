@@ -1,0 +1,118 @@
+.banking-hero {
+  --banking-watermark-top: min(9.5833vw, 17.2285vh);
+  --banking-watermark-size: min(13.0208vw, 23.4082vh);
+  --banking-watermark-line: min(13.817vw, 24.8395vh);
+  --banking-watermark-gap: min(8.3333vw, 14.9813vh);
+  --banking-card-left: min(64px, 3.3333vw);
+  --banking-card-top: min(572px, 29.7917vw);
+  --banking-card-w: min(486px, 25.3125vw);
+  --banking-card-pad-top: min(27px, 1.4063vw);
+  --banking-card-pad-right: min(36px, 1.875vw);
+  --banking-card-pad-bottom: min(48px, 2.5vw);
+  --banking-card-pad-left: min(29px, 1.5104vw);
+  --banking-card-radius: min(20px, 1.0417vw);
+  --banking-card-copy-top: min(28px, 1.4583vw);
+  --banking-card-font: min(20px, 1.0417vw);
+  --banking-card-line: min(30px, 1.5625vw);
+  --banking-card-x: 0px;
+  --banking-card-y: 0px;
+}
+
+.banking-hero-copy {
+  z-index: 1;
+}
+
+.banking-hero-watermark {
+  margin: 0;
+  max-width: none;
+  color: rgba(255, 255, 255, 0.05);
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.banking-hero-card {
+  z-index: 3;
+}
+
+.banking-hero-card-inner {
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(129, 112, 112, 0.07);
+  -webkit-backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(7.5px);
+}
+
+.banking-hero-card-mark {
+  display: block;
+  width: min(14.083px, 0.7335vw);
+  height: min(14.083px, 0.7335vw);
+  max-width: none;
+}
+
+.banking-hero-card-text {
+  max-width: 100%;
+}
+
+.banking-hero .banking-hero-fg {
+  inset: auto 0 0 50%;
+  width: min(1368px, 71.25vw);
+  aspect-ratio: 1368 / 912;
+  height: auto;
+  transform: translateX(-50%);
+}
+
+.banking-hero .banking-hero-fg img {
+  object-position: center bottom;
+}
+
+@media (max-width: 1024px) {
+  .banking-hero {
+    height: 100dvh !important;
+    min-height: 100dvh;
+    --banking-watermark-top: 6.5rem;
+    --banking-watermark-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --banking-watermark-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --banking-watermark-gap: 1.25rem;
+    --banking-card-left: 1.25rem;
+    --banking-card-top: auto;
+    --banking-card-w: min(27rem, calc(100vw - 2.5rem));
+    --banking-card-pad-top: 1.35rem;
+    --banking-card-pad-right: 1.45rem;
+    --banking-card-pad-bottom: 2rem;
+    --banking-card-pad-left: 1.45rem;
+    --banking-card-radius: 1.1rem;
+    --banking-card-copy-top: 1rem;
+    --banking-card-font: clamp(14px, 2.2vw, 18px);
+    --banking-card-line: 1.45;
+  }
+
+  .banking-hero-card {
+    bottom: 1.5rem;
+  }
+
+  .banking-hero-card-mark {
+    height: 14px;
+    width: 14px;
+  }
+
+  .banking-hero .banking-hero-fg {
+    width: min(52rem, 88vw);
+  }
+}
+
+@media (max-width: 639px) {
+  .banking-hero {
+    --banking-watermark-top: 6.5rem;
+    --banking-watermark-size: clamp(1.3rem, 6.6vw, 1.85rem);
+    --banking-card-left: 50%;
+    --banking-card-x: -50%;
+    --banking-card-w: min(21.5rem, calc(100vw - 1.5rem));
+    --banking-card-font: clamp(13px, 3.8vw, 15px);
+  }
+
+  .banking-hero-card {
+    bottom: 1rem;
+  }
+}

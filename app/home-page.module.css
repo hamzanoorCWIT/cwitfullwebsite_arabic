@@ -1,0 +1,17 @@
+.blogs {
+  min-height: 0 !important;
+}
+
+.solutions {
+  background: #fff !important;
+}
+
+@media (max-width: 767px) {
+  .solutions {
+    display: none !important;
+  }
+}
+
+.faq {
+  min-height: 0 !important;
+}

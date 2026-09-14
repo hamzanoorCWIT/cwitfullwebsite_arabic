@@ -1,0 +1,157 @@
+.logo-app-hero {
+  --logo-app-banner-scale: 1;
+  --logo-app-card-gap: calc(1.4583vw * var(--logo-app-banner-scale));
+  --logo-app-title-top: calc(7.2917vw * var(--logo-app-banner-scale));
+  --logo-app-title-size: calc(13.0208vw * var(--logo-app-banner-scale));
+  --logo-app-title-line-height: calc(13.817vw * var(--logo-app-banner-scale));
+  --logo-app-title-gap: calc(8.3333vw * var(--logo-app-banner-scale));
+  --logo-app-card-x: 0px;
+  --logo-app-card-bottom: auto;
+  --logo-app-desc-x: 0px;
+  --logo-app-desc-bottom: auto;
+  --logo-app-desc-top: calc(41.5625vw * var(--logo-app-banner-scale));
+  --logo-app-big-top: calc(23.0208vw * var(--logo-app-banner-scale));
+  --logo-app-idea-top: calc(26.5625vw * var(--logo-app-banner-scale));
+  --logo-app-idea-size: calc(16.4583vw * var(--logo-app-banner-scale));
+  --logo-app-pencil-top: calc(-8.4375vw * var(--logo-app-banner-scale));
+  --logo-app-pencil-left: calc(50% - 17.0833vw * var(--logo-app-banner-scale));
+  --logo-app-pencil-width: calc(6.5625vw * var(--logo-app-banner-scale));
+  --logo-app-pencil-height: calc(48.4375vw * var(--logo-app-banner-scale));
+  --logo-app-shift-y: 0px;
+}
+
+.logo-app-hero-title {
+  font-family: var(--font-inter);
+  font-weight: 800;
+  font-size: var(--logo-app-title-size);
+  line-height: var(--logo-app-title-line-height);
+  letter-spacing: 0;
+  color: #ffffff;
+  opacity: 0.1;
+}
+
+.logo-app-pencil {
+  position: absolute;
+  left: var(--logo-app-pencil-left);
+  top: var(--logo-app-pencil-top);
+  width: var(--logo-app-pencil-width);
+  height: var(--logo-app-pencil-height);
+  overflow: hidden;
+  opacity: 0.16;
+  transform: translateY(-42vh);
+  transition:
+    transform 1.25s cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.logo-app-banner-foreground.is-shown .logo-app-pencil {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fill the 930×slot (top -162). Do not use the old 492% padded-PNG crop. */
+.logo-app-hero .logo-app-pencil img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  transform: none !important;
+  object-fit: fill !important;
+  object-position: top center !important;
+}
+
+.logo-app-banner-art,
+.logo-app-banner-watermark,
+.logo-app-banner-card,
+.logo-app-banner-copy,
+.logo-app-pencil,
+.logo-app-idea,
+.logo-app-banner-desc,
+.logo-app-banner-stack {
+  pointer-events: none;
+}
+
+.logo-app-banner-foreground {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  transform: translateY(var(--logo-app-shift-y, 0px));
+}
+
+.logo-app-banner-copy {
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  transform: perspective(1400px) translateZ(-240px) scale(0.86);
+  transform-origin: 38% 48%;
+  transition:
+    transform 1.25s cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.logo-app-banner-foreground.is-shown .logo-app-banner-copy {
+  opacity: 1;
+  transform: perspective(1400px) translateZ(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-app-banner-copy,
+  .logo-app-pencil,
+  .logo-app-banner-foreground.is-shown .logo-app-banner-copy,
+  .logo-app-banner-foreground.is-shown .logo-app-pencil {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.logo-app-banner-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+}
+
+@media (max-width: 1024px) {
+  .logo-app-hero {
+    min-height: 100dvh;
+    --logo-app-title-top: 5.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo-app-hero {
+    --logo-app-banner-scale: 1.22;
+    --logo-app-title-top: 6rem;
+    --logo-app-big-top: calc(24.6875vw * var(--logo-app-banner-scale));
+    --logo-app-idea-top: calc(28.2292vw * var(--logo-app-banner-scale));
+    --logo-app-desc-top: calc(43.2292vw * var(--logo-app-banner-scale));
+    --logo-app-pencil-top: calc(-8.4375vw * var(--logo-app-banner-scale));
+    --logo-app-pencil-left: calc(50% - 17.0833vw * var(--logo-app-banner-scale));
+    --logo-app-card-left: 1rem;
+    --logo-app-card-top: auto;
+    --logo-app-card-bottom: 1.25rem;
+    --logo-app-card-w: calc(100% - 2rem);
+    --logo-app-card-x: 0px;
+    --logo-app-card-pad-top: 1.1rem;
+    --logo-app-card-pad-x: 1.25rem;
+    --logo-app-card-pad-bottom: 1.5rem;
+    --logo-app-card-radius: 1.1rem;
+    --logo-app-card-font: clamp(14px, 4vw, 16px);
+    --logo-app-card-line: 1.45;
+    --logo-app-card-text-w: 100%;
+    --logo-app-card-icon: 0.9rem;
+    --logo-app-card-gap: 0.85rem;
+    min-height: 640px;
+  }
+}
+
+@media (max-width: 479px) {
+  .logo-app-hero {
+    --logo-app-title-top: 5.75rem;
+    --logo-app-card-font: clamp(13px, 3.8vw, 15px);
+  }
+}

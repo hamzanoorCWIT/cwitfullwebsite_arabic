@@ -1,0 +1,264 @@
+.figmaSection {
+  min-height: 0;
+  overflow-x: clip;
+  overflow-y: visible;
+  padding: clamp(90px, 8vw, 126px) 0 clamp(96px, 8vw, 132px);
+  background: #000;
+}
+
+.figmaTitle {
+  margin: 0 0 clamp(48px, 5vw, 88px);
+  color: #fff;
+  text-align: start;
+}
+
+.figmaCardsWrap {
+  --figma-gap: clamp(16px, 1.6vw, 32px);
+  overflow-x: clip;
+  overflow-y: visible;
+  padding-bottom: 4px;
+}
+
+.figmaTrack {
+  display: flex;
+  align-items: stretch;
+  gap: var(--figma-gap) !important;
+  padding-inline: 0 !important;
+}
+
+.figmaTrackInteractive {
+  cursor: grab;
+}
+
+.figmaSlide {
+  flex: 0 0 100%;
+  width: 100%;
+  flex-shrink: 0;
+  height: auto;
+  align-self: stretch;
+}
+
+.figmaCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  border: 1px solid #fff;
+}
+
+.figmaCardImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 436 / 320;
+  height: auto;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.figmaCardContent {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(18px, 1.667vw, 32px);
+  text-align: start;
+}
+
+.figmaCardTitle {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-inter);
+  font-size: clamp(16px, 1.15vw, 22px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-align: start;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.figmaCardCategory + .figmaCardTitle {
+  margin-top: 10px;
+}
+
+.figmaCardCategory {
+  margin-top: 0;
+  color: #fff;
+  font-size: clamp(11px, 0.75vw, 14px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-align: start;
+  text-transform: uppercase;
+}
+
+.figmaCardReadMore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: clamp(16px, 1.4vw, 24px);
+  /* Mobile: compact like header small CTA; desktop: previous card size */
+  width: auto;
+  min-width: 120px;
+  height: 32px;
+  padding: 0 16px;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font-family: var(--font-gilroy);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+@media (min-width: 640px) {
+  .figmaCardReadMore {
+    min-width: 140px;
+    height: 36px;
+    padding: 0 20px;
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 768px) {
+  .figmaCardReadMore {
+    /* Previous desktop card CTA size */
+    min-width: unset;
+    height: auto;
+    padding: 12px 22px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .figmaCardReadMore {
+    padding: 14px 28px;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .figmaCardReadMore {
+    padding: 16px 34px;
+    font-size: 13px;
+  }
+}
+
+a.figmaCardReadMore:hover,
+span.figmaCardReadMore:hover {
+  background: #fff;
+  color: #000;
+}
+
+.figmaCardDescription {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: clamp(12px, 1.1vw, 18px) 0 0;
+  color: rgb(255 255 255 / 88%);
+  font-family: var(--font-inter);
+  font-size: clamp(12px, 0.75vw, 14px);
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: start;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+@media (min-width: 640px) {
+  .figmaSlide {
+    flex-basis: calc((100% - var(--figma-gap)) / 2);
+    width: calc((100% - var(--figma-gap)) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .figmaSlide {
+    flex-basis: calc((100% - (2 * var(--figma-gap))) / 3);
+    width: calc((100% - (2 * var(--figma-gap))) / 3);
+  }
+
+  .figmaCardCategory {
+    font-size: clamp(
+      12px,
+      calc(12px + 2 * ((100vw - 1024px) / 896)),
+      14px
+    );
+  }
+
+  .figmaCardTitle {
+    font-size: clamp(
+      18px,
+      calc(18px + 4 * ((100vw - 1024px) / 896)),
+      22px
+    );
+  }
+
+  .figmaCardDescription {
+    font-size: clamp(
+      12px,
+      calc(12px + 2 * ((100vw - 1024px) / 896)),
+      14px
+    );
+  }
+}
+
+@media (min-width: 1440px) {
+  .figmaCardsWrap {
+    --figma-gap: clamp(24px, 1.67vw, 32px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .figmaCardCategory {
+    font-size: 14px;
+  }
+
+  .figmaCardTitle {
+    font-size: 22px;
+  }
+
+  .figmaCardDescription {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .figmaSection {
+    padding: 68px 0 76px;
+  }
+
+  .figmaTitle {
+    margin-bottom: clamp(36px, 5vw, 48px);
+  }
+
+  .figmaCardImage {
+    aspect-ratio: 4 / 3;
+  }
+
+  .figmaCardContent {
+    padding: 24px;
+  }
+
+  .figmaCardCategory {
+    font-size: 11px;
+  }
+
+  .figmaCardTitle {
+    font-size: 16px;
+  }
+
+  .figmaCardDescription {
+    font-size: 12px;
+  }
+}
+
+/* Card/section dir=rtl handles Arabic alignment via text-align: start. */

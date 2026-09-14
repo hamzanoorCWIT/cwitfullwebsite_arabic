@@ -1,0 +1,133 @@
+.energy-hero {
+  --energy-watermark-top: min(6.5729vw, 19.0075vh);
+  --energy-watermark-size: min(13.0208vw, 23.4082vh);
+  --energy-watermark-line: min(13.817vw, 24.8395vh);
+  --energy-watermark-gap: min(8.3333vw, 14.9813vh);
+  --energy-card-left: min(3.3854vw, 6.0861vh);
+  --energy-card-top: min(27.8125vw, 50vh);
+  --energy-card-w: min(25.2604vw, 45.4119vh);
+  --energy-card-pad-top: min(1.4063vw, 2.5281vh);
+  --energy-card-pad-right: min(1.875vw, 3.3708vh);
+  --energy-card-pad-bottom: min(2.5vw, 4.4944vh);
+  --energy-card-pad-left: min(1.5104vw, 2.7154vh);
+  --energy-card-radius: min(1.0417vw, 1.8727vh);
+  --energy-card-copy-top: min(1.4583vw, 2.6217vh);
+  --energy-card-font: min(1.0417vw, 1.8727vh);
+  --energy-card-line: min(1.5625vw, 2.809vh);
+  --energy-card-x: 0px;
+  --energy-card-y: 0px;
+}
+
+.energy-hero-copy {
+  z-index: 1;
+}
+
+.energy-hero-watermark {
+  margin: 0;
+  max-width: none;
+  color: rgba(255, 255, 255, 0.11);
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.energy-hero-card {
+  z-index: 4;
+}
+
+.energy-hero-card-inner {
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(129, 112, 112, 0.07);
+  -webkit-backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(7.5px);
+}
+
+.energy-hero-card-mark {
+  display: block;
+  width: min(0.7335vw, 1.3186vh);
+  height: min(0.7335vw, 1.3186vh);
+  max-width: none;
+}
+
+.energy-hero-card-text {
+  width: min(21.875vw, 39.3258vh);
+  max-width: 100%;
+  letter-spacing: 0;
+}
+
+.energy-hero .energy-hero-fg {
+  inset: auto 0 0 auto;
+  width: min(74.2188vw, 133.427vh);
+  height: min(47.2917vw, 85.0187vh);
+  transform: none;
+}
+
+.energy-hero .energy-hero-fg img {
+  object-position: right bottom;
+}
+
+@media (max-width: 1024px) {
+  .energy-hero {
+    height: 100dvh !important;
+    min-height: 100dvh;
+    --energy-watermark-top: 6.75rem;
+    --energy-watermark-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --energy-watermark-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --energy-watermark-gap: 1.25rem;
+    --energy-card-left: 1.25rem;
+    --energy-card-top: auto;
+    --energy-card-w: min(27rem, calc(100vw - 2.5rem));
+    --energy-card-pad-top: 1.35rem;
+    --energy-card-pad-right: 1.45rem;
+    --energy-card-pad-bottom: 2rem;
+    --energy-card-pad-left: 1.45rem;
+    --energy-card-radius: 1.1rem;
+    --energy-card-copy-top: 1rem;
+    --energy-card-font: clamp(14px, 2.2vw, 18px);
+    --energy-card-line: 1.45;
+  }
+
+  .energy-hero-card {
+    bottom: 1.5rem;
+  }
+
+  .energy-hero-card-mark {
+    height: 14px;
+    width: 14px;
+  }
+
+  .energy-hero-card-text {
+    width: 100%;
+  }
+
+  .energy-hero .energy-hero-fg {
+    inset: auto 0 0 auto;
+    width: min(58rem, 132vw);
+    height: min(38rem, 60vh);
+    transform: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .energy-hero {
+    --energy-watermark-top: 6.5rem;
+    --energy-watermark-size: clamp(1.3rem, 6.6vw, 1.85rem);
+    --energy-card-left: 50%;
+    --energy-card-x: -50%;
+    --energy-card-w: min(21.5rem, calc(100vw - 1.5rem));
+    --energy-card-font: clamp(13px, 3.8vw, 15px);
+  }
+
+  .energy-hero-card {
+    bottom: 1rem;
+  }
+
+  .energy-hero .energy-hero-fg {
+    inset: auto 0 0 auto;
+    width: min(45rem, 162vw);
+    height: min(30rem, 52vh);
+    transform: none;
+  }
+}

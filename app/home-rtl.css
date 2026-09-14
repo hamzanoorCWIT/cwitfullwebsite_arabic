@@ -1,0 +1,189 @@
+/* Site-wide Arabic RTL layout. `.home-page-rtl` is set in AppShell when locale is AR. */
+
+.home-page-rtl {
+  text-align: start;
+}
+
+.home-page-rtl .text-left {
+  text-align: right !important;
+}
+
+.home-page-rtl .ml-auto {
+  margin-left: unset !important;
+  margin-right: auto !important;
+}
+
+.home-page-rtl .pr-8 {
+  padding-right: 0 !important;
+  padding-left: 2rem !important;
+}
+
+.home-page-rtl .accordion-title,
+.home-page-rtl .accordion-content {
+  text-align: right;
+}
+
+.home-page-rtl .cms-rich-text blockquote {
+  border-left-width: 0;
+  border-right: 3px solid rgba(255, 255, 255, 0.3);
+  padding-left: 0;
+  padding-right: 1em;
+}
+
+/* Keep LTR islands (carousels, WhatsApp) from inheriting the text remaps. */
+.home-page-rtl [dir="ltr"] .text-left,
+.home-page-rtl [dir="ltr"].text-left {
+  text-align: left !important;
+}
+
+.home-page-rtl [dir="ltr"] .ml-auto,
+.home-page-rtl [dir="ltr"].ml-auto {
+  margin-left: auto !important;
+  margin-right: unset !important;
+}
+
+.home-page-rtl [dir="ltr"] .pr-8,
+.home-page-rtl [dir="ltr"].pr-8 {
+  padding-left: 0 !important;
+  padding-right: 2rem !important;
+}
+
+.home-page-rtl [dir="ltr"] .accordion-title,
+.home-page-rtl [dir="ltr"] .accordion-content {
+  text-align: left;
+}
+
+/* Banner mask: flip like Showcase before.png, and pin to right (mirror of EN left). */
+.home-page-rtl .vector-background img,
+.home-page-rtl .digital-experience-banner-mask img {
+  transform: scaleX(-1);
+}
+
+.home-page-rtl .vector-background,
+.home-page-rtl .digital-experience-banner-mask.vector-background {
+  left: auto !important;
+  right: clamp(-200px, -10vw, -100px) !important;
+}
+
+@media (min-width: 1280px) {
+  .home-page-rtl .vector-background,
+  .home-page-rtl .digital-experience-banner-mask.vector-background {
+    right: 0 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .home-page-rtl .tunedBanner .vector-background,
+  .home-page-rtl .blogBanner .vector-background {
+    left: auto !important;
+    right: calc(-60 * 100vw / 1280) !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .home-page-rtl .tunedBanner .vector-background,
+  .home-page-rtl .blogBanner .vector-background {
+    left: auto !important;
+    right: 0 !important;
+  }
+}
+
+/* Contact form: EN sits on the right — mirror to left in Arabic. */
+.home-page-rtl .contact-form-container {
+  right: auto !important;
+  left: 66px !important;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .home-page-rtl .contact-form-container {
+    right: auto !important;
+    left: clamp(20px, 5vw, 40px) !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .home-page-rtl .contact-form-container {
+    right: auto !important;
+    left: clamp(30px, 4vw, 50px) !important;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1519px) {
+  .home-page-rtl .contact-form-container {
+    right: auto !important;
+    left: 168px !important;
+  }
+}
+
+@media (min-width: 1520px) and (max-width: 1719px) {
+  .home-page-rtl .contact-form-container {
+    right: auto !important;
+    left: 168px !important;
+  }
+}
+
+@media (min-width: 1719px) and (max-width: 2559px) {
+  .home-page-rtl .contact-form-container {
+    right: auto !important;
+    left: 11% !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px),
+  (min-width: 1440px) and (max-width: 1600px) {
+  .home-page-rtl .contact-form-container {
+    right: auto !important;
+    left: 10.5% !important;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 2569px) {
+  .home-page-rtl .contact-form-container {
+    right: auto !important;
+    left: 10.5% !important;
+  }
+}
+
+@media (min-width: 2570px) and (max-width: 2879px) {
+  .home-page-rtl .contact-form-container {
+    right: auto !important;
+    left: 10% !important;
+  }
+}
+
+@media (min-width: 2880px) and (max-width: 2889px) {
+  .home-page-rtl .contact-form-container {
+    right: auto !important;
+    left: 9.3% !important;
+  }
+}
+
+@media (min-width: 2890px) {
+  .home-page-rtl .contact-form-container {
+    right: auto !important;
+    left: 9% !important;
+  }
+}
+
+@media (min-width: 3456px) and (max-width: 3465px) {
+  .home-page-rtl .contact-form-container {
+    right: auto !important;
+    left: 7.8% !important;
+  }
+}
+
+/* Contact form: phone (tel) stays LTR in many browsers — force RTL in Arabic. */
+.home-page-rtl .contact-form-container input[type="tel"],
+.home-page-rtl form[dir="rtl"] input[type="tel"] {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: plaintext;
+}
+
+/* Tablet padding that was physical left → mirror in RTL */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .home-page-rtl .contact-form-container {
+    padding-left: 0 !important;
+    padding-right: 140px !important;
+  }
+}
