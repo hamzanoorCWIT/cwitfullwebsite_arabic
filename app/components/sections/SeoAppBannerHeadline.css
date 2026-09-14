@@ -1,0 +1,37 @@
+/* Existing SEO title top is 86px. Type matches /mobile-app marquee. */
+.seo-app-hero {
+  --seo-app-marquee-top: min(86px, 4.4792vw);
+  --seo-app-marquee-height: min(12.0313vw, 24.4444vh);
+  --seo-app-marquee-size: min(11.5104vw, 23.3862vh);
+  --seo-app-marquee-line: min(12.0313vw, 24.4444vh);
+  --seo-app-marquee-gap: min(8.3333vw, 16.9312vh);
+}
+
+@media (max-width: 1024px) {
+  .seo-app-hero {
+    --seo-app-marquee-top: 6.5rem;
+    --seo-app-marquee-height: clamp(2.25rem, 7.2vw, 3.15rem);
+    --seo-app-marquee-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --seo-app-marquee-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --seo-app-marquee-gap: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .seo-app-hero {
+    --seo-app-marquee-top: 6.75rem;
+    --seo-app-marquee-size: clamp(1.45rem, 7vw, 2.2rem);
+    --seo-app-marquee-height: clamp(1.9rem, 7.6vw, 2.6rem);
+    --seo-app-marquee-line: clamp(1.9rem, 7.6vw, 2.6rem);
+    --seo-app-card-left-top: auto;
+    --seo-app-card-left-bottom: 30%;
+    --seo-app-card-right-top: 30%;
+  }
+}
+
+@media (max-width: 479px) {
+  .seo-app-hero {
+    --seo-app-marquee-top: 6.5rem;
+    --seo-app-marquee-size: clamp(1.3rem, 6.6vw, 1.85rem);
+  }
+}

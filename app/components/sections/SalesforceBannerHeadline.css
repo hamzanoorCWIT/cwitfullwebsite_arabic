@@ -1,0 +1,50 @@
+.salesforce-hero {
+  --salesforce-watermark-top: min(6.9271vw, 20.8182vh);
+  --salesforce-watermark-size: min(13.0208vw, 22.7273vh);
+  --salesforce-watermark-line: min(13.8151vw, 24.1136vh);
+  --salesforce-watermark-gap: min(8.3333vw, 14.5455vh);
+}
+
+.salesforce-hero-copy {
+  z-index: 1;
+}
+
+.salesforce-hero-marquee {
+  z-index: 1;
+}
+
+.salesforce-hero-watermark {
+  margin: 0;
+  max-width: none;
+  color: #ffffff;
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: 0;
+  opacity: 0.22;
+}
+
+@media (max-width: 1024px) {
+  .salesforce-hero {
+    height: 100dvh !important;
+    min-height: 100dvh;
+    --salesforce-watermark-top: 6.5rem;
+    --salesforce-watermark-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --salesforce-watermark-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --salesforce-watermark-gap: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .salesforce-hero {
+    --salesforce-watermark-top: 6.75rem;
+    --salesforce-watermark-size: clamp(1.45rem, 7vw, 2.2rem);
+    --salesforce-watermark-line: clamp(1.9rem, 7.6vw, 2.6rem);
+  }
+}
+
+@media (max-width: 479px) {
+  .salesforce-hero {
+    --salesforce-watermark-top: 6.5rem;
+    --salesforce-watermark-size: clamp(1.3rem, 6.6vw, 1.85rem);
+  }
+}

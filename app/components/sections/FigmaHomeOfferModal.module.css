@@ -1,0 +1,64 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.scroll {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  padding-top: 72px;
+}
+
+.cards {
+  min-height: calc(100vh - 72px);
+  padding-top: 0 !important;
+  padding-bottom: clamp(32px, 5vw, 64px) !important;
+  background: transparent !important;
+}
+
+.cards :global(.studio-service-card) {
+  min-height: clamp(520px, 85vh, 750px);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18);
+}
+
+.close {
+  position: fixed;
+  top: 20px;
+  inset-inline-end: 20px;
+  z-index: 210;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.close:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #f3f4f6;
+}
+
+.overlay[dir="rtl"] .cards :global(.studio-service-card),
+.overlay[dir="rtl"] .cards :global(.studio-service-card h3),
+.overlay[dir="rtl"] .cards :global(.studio-service-card p),
+.overlay[dir="rtl"] .cards :global(.studio-service-card span) {
+  text-align: start;
+}

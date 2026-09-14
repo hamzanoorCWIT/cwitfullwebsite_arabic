@@ -1,0 +1,95 @@
+/* Desktop values match the 1920 × 1068 Figma banner. */
+.web-app-hero {
+  --web-app-title-top: min(5.5417vw, 17.3545vh);
+  --web-app-title-size: min(13.0208vw, 23.4082vh);
+  --web-app-title-line-height: min(13.817vw, 24.8395vh);
+  --web-app-title-gap: min(8.3333vw, 14.9813vh);
+  --web-app-card-top: min(22.2396vw, 39.9813vh);
+  --web-app-card-left: min(3.3854vw, 6.0861vh);
+  --web-app-card-w: min(22.5vw, 40.4494vh);
+  --web-app-card-pad-top: min(1.4063vw, 2.5281vh);
+  --web-app-card-pad-x: min(1.5104vw, 2.7154vh);
+  --web-app-card-pad-bottom: min(2.5vw, 4.4944vh);
+  --web-app-card-radius: min(1.0417vw, 1.8727vh);
+  --web-app-card-font: min(1.0417vw, 1.8727vh);
+  --web-app-card-line-height: min(1.5625vw, 2.809vh);
+  --web-app-card-x: 0px;
+  --web-app-card-y: 0px;
+}
+
+.web-app-hero::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(102, 102, 102, 0));
+}
+
+.web-app-hero-title {
+  font-family: var(--font-inter);
+  font-weight: 800;
+  font-size: var(--web-app-title-size);
+  line-height: var(--web-app-title-line-height);
+  letter-spacing: 0;
+  color: rgba(255, 0, 0, 0.7);
+  -webkit-text-fill-color: rgba(255, 0, 0, 0.7);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+  paint-order: stroke fill;
+  opacity: 0.22;
+}
+
+.web-app-hero-card-text {
+  font-size: var(--web-app-card-font);
+}
+
+.web-app-hero-card-mark {
+  display: block;
+  width: min(0.7335vw, 1.3186vh);
+  height: min(0.7335vw, 1.3186vh);
+  max-width: none;
+}
+
+@media (max-width: 1024px) {
+  .web-app-hero {
+    min-height: 100dvh;
+    --web-app-title-top: 6.5rem;
+    --web-app-card-top: 42vh;
+    --web-app-card-left: 1.25rem;
+    --web-app-card-w: min(25rem, calc(100vw - 2.5rem));
+    --web-app-card-pad-top: 1.35rem;
+    --web-app-card-pad-x: 1.45rem;
+    --web-app-card-pad-bottom: 2rem;
+    --web-app-card-radius: 1.1rem;
+    --web-app-card-font: clamp(15px, 2.2vw, 18px);
+    --web-app-card-line-height: 1.45;
+  }
+
+  .web-app-hero-card-inner {
+    max-width: calc(100vw - 1.5rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .web-app-hero {
+    --web-app-title-top: 6.75rem;
+    --web-app-card-left: 50%;
+    --web-app-card-top: auto;
+    --web-app-card-x: -50%;
+    --web-app-card-y: 0px;
+    --web-app-card-w: min(22rem, calc(100vw - 2rem));
+    --web-app-card-font: clamp(14px, 4vw, 16px);
+  }
+
+  .web-app-hero-card {
+    bottom: 1.25rem;
+    top: auto;
+  }
+}
+
+@media (max-width: 479px) {
+  .web-app-hero {
+    --web-app-title-top: 6.5rem;
+    --web-app-card-font: clamp(13px, 3.8vw, 15px);
+  }
+}

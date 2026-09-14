@@ -1,0 +1,83 @@
+/**
+ * Studio service detail banners (Digital Experience, Growth Branding,
+ * Application Development, AI & Things).
+ * Video catering from 1685px down + mobile bottom placement.
+ * Match 1686+ behavior: video under BG (lower z-index), sized on the right.
+ */
+
+.dxBanner {
+  overflow: hidden !important;
+}
+
+/* Mobile: taller banner so BG isn’t cut at bottom / overflow at top */
+@media (max-width: 767px) {
+  .dxBanner {
+    min-height: 650px !important;
+  }
+
+  .dxBanner > :global(.relative.z-30) > div {
+    min-height: 650px !important;
+  }
+}
+
+/*
+ * 768px–1685px: same top-right video sizing as large desktop,
+ * z-index below BG (20) so any edge meet shows BG on top — no video-on-BG overlap.
+ */
+@media (min-width: 768px) and (max-width: 1685px) {
+  .dxBanner :global(.digital-experience-video-container--top-right) {
+    top: clamp(160px, 18vh, 240px) !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: clamp(24px, 4vw, 80px) !important;
+    /* Match ≥1686 top-right scale — don’t grow into the BG */
+    width: clamp(400px, 40vw, 680px) !important;
+    max-width: min(680px, calc(100% - clamp(24px, 4vw, 80px) - 32px)) !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    overflow: hidden !important;
+    /* BG is z-index 20 — keep video underneath */
+    z-index: 15 !important;
+  }
+
+  .dxBanner :global(.digital-experience-banner-video-top-right) {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+
+/*
+ * Mobile: video at the bottom. Background Image stays original (full-bleed cover).
+ * z-index below BG (20) — same stacking as desktop/tablet.
+ */
+@media (max-width: 767px) {
+  .dxBanner :global(.digital-experience-video-container--mobile-top-right) {
+    top: auto !important;
+    bottom: clamp(16px, 5vw, 32px) !important;
+    left: auto !important;
+    right: clamp(12px, 4vw, 20px) !important;
+    transform: none !important;
+    width: min(58%, 280px) !important;
+    max-width: min(58%, 280px) !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    /* BG is z-index 20 — keep video underneath */
+    z-index: 15 !important;
+  }
+
+  .dxBanner :global(.digital-experience-banner-video-top-right) {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}

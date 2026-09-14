@@ -1,0 +1,12 @@
+.heading {
+  composes: section-heading from global;
+}
+
+.headingCenter {
+  composes: section-heading-center from global;
+}
+
+/* Size + weight only — for titles that keep their own font-family */
+.headingSize {
+  composes: section-heading-size from global;
+}

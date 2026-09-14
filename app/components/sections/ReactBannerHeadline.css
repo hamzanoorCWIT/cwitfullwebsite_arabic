@@ -1,0 +1,134 @@
+.react-hero {
+  --react-watermark-top: min(12.6042vw, 22.4074vh);
+  --react-watermark-size: min(13.0208vw, 23.1481vh);
+  --react-watermark-line: min(13.817vw, 24.5635vh);
+  --react-watermark-gap: min(8.3333vw, 14.8148vh);
+  /* Figma: x=1217, y=777 in the 1920 × 1080 hero. Keep the
+     right inset tied to the viewport, independent of card scaling. */
+  --react-card-left: auto;
+  --react-card-right: 14.0104%;
+  --react-card-top: 71.9444%;
+  --react-card-w: min(434px, 22.6042vw, 40.1852vh);
+  --react-card-pad-top: min(27px, 1.4063vw, 2.5vh);
+  --react-card-pad-right: min(36px, 1.875vw, 3.3333vh);
+  --react-card-pad-bottom: min(48px, 2.5vw, 4.4444vh);
+  --react-card-pad-left: min(29px, 1.5104vw, 2.6852vh);
+  --react-card-radius: min(20px, 1.0417vw, 1.8519vh);
+  --react-card-copy-top: min(28px, 1.4583vw, 2.5926vh);
+  --react-card-font: min(20px, 1.0417vw, 1.8519vh);
+  --react-card-line: min(30px, 1.5625vw, 2.7778vh);
+  --react-blur-left: calc(50% + min(10px, 0.5208vw, 0.9259vh));
+  --react-blur-bottom: 0px;
+  --react-blur-w: min(1076px, 56.0417vw, 99.6296vh);
+  --react-blur-h: min(247px, 12.8646vw, 22.8704vh);
+  --react-card-x: 0px;
+  --react-card-y: 0px;
+}
+
+.react-hero-copy {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.react-hero-watermark {
+  margin: 0;
+  max-width: none;
+  color: rgba(255, 255, 255, 0.22);
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.react-hero-card-inner {
+  display: grid;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(129, 112, 112, 0.07);
+  -webkit-backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(7.5px);
+}
+
+.react-hero-card-mark {
+  grid-area: 1 / 1;
+  display: block;
+  width: min(0.7335vw, 1.30398vh);
+  height: min(0.7335vw, 1.30398vh);
+  max-width: none;
+}
+
+.react-hero-card-text {
+  grid-area: 1 / 1;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.react-hero-bottom-blur {
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  filter: blur(min(40.65px, 2.1172vw, 3.7639vh));
+}
+
+.react-hero-bottom-blur-img {
+  position: absolute;
+  left: -53.86%;
+  top: -377.95%;
+  width: 205.79%;
+  height: 478.02%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.react-hero-card {
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .react-hero {
+    height: 100dvh !important;
+    min-height: 100dvh;
+    --react-watermark-top: 6.5rem;
+    --react-watermark-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --react-watermark-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --react-watermark-gap: 1.25rem;
+    --react-blur-left: 50%;
+    --react-blur-bottom: 0px;
+    --react-blur-w: min(42rem, 130vw);
+    --react-blur-h: 11rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .react-hero {
+    --react-watermark-top: 6.75rem;
+    --react-watermark-size: clamp(1.45rem, 7vw, 2.2rem);
+    --react-watermark-line: clamp(1.9rem, 7.6vw, 2.6rem);
+    --react-card-left: 50%;
+    --react-card-right: auto;
+    --react-card-top: auto;
+    --react-card-x: -50%;
+    --react-card-w: min(22rem, calc(100vw - 2rem));
+    --react-card-pad-top: 1.35rem;
+    --react-card-pad-right: 1.45rem;
+    --react-card-pad-bottom: 2rem;
+    --react-card-pad-left: 1.45rem;
+    --react-card-radius: 1.1rem;
+    --react-card-copy-top: 1rem;
+    --react-card-font: clamp(14px, 4vw, 16px);
+    --react-card-line: 1.45;
+  }
+
+  .react-hero-card {
+    bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .react-hero {
+    --react-watermark-top: 6.5rem;
+    --react-watermark-size: clamp(1.3rem, 6.6vw, 1.85rem);
+    --react-card-font: clamp(13px, 3.8vw, 15px);
+  }
+}

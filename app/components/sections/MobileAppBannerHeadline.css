@@ -1,0 +1,137 @@
+/* Desktop values match the live Figma frameSize() output. */
+.mobile-app-hero {
+  --mobile-app-marquee-top: min(3.5417vw, 17.3545vh);
+  --mobile-app-marquee-height: min(12.0313vw, 24.4444vh);
+  --mobile-app-marquee-size: min(11.5104vw, 23.3862vh);
+  --mobile-app-marquee-line: min(12.0313vw, 24.4444vh);
+  --mobile-app-marquee-gap: min(8.3333vw, 16.9312vh);
+  --mobile-app-tag-left-top: min(37.6042vw, 76.4021vh);
+  --mobile-app-tag-left-bottom: auto;
+  --mobile-app-tag-left-x: min(22.9167vw, 46.5608vh);
+  --mobile-app-tag-right-top: min(27.8125vw, 56.5079vh);
+  --mobile-app-tag-right-bottom: auto;
+  --mobile-app-tag-right-x: min(21.6146vw, 43.9153vh);
+  --mobile-app-tag-w: min(13.8542vw, 28.1481vh);
+  --mobile-app-tag-h: min(4.6354vw, 9.418vh);
+  --mobile-app-tag-icon: min(2.7083vw, 5.5026vh);
+  --mobile-app-tag-icon-mark: min(1.25vw, 2.5397vh);
+  --mobile-app-tag-icon-radius: min(0.5208vw, 1.0582vh);
+  --mobile-app-tag-font: min(0.9375vw, 1.9048vh);
+  --mobile-app-tag-gap: min(0.625vw, 1.2698vh);
+  --mobile-app-tag-pad-x: min(0.8333vw, 1.6931vh);
+  --mobile-app-tag-pad-y: min(0.9375vw, 1.9048vh);
+  --mobile-app-tag-radius: min(0.7292vw, 1.4815vh);
+  --mobile-app-tag-y: 0px;
+  --mobile-app-tag-x: 0px;
+  --mobile-app-tag-right-left: auto;
+}
+
+.mobile-app-hero-tag-text {
+  font-size: var(--mobile-app-tag-font);
+}
+
+/* Same composition as desktop: phones sit on the bottom, tags stay on them. */
+@media (max-width: 1399px) {
+  .mobile-app-hero {
+    min-height: 100dvh;
+    --mobile-app-tag-left-top: auto;
+    --mobile-app-tag-left-bottom: 14.18%;
+    --mobile-app-tag-right-top: auto;
+    --mobile-app-tag-right-bottom: 34.07%;
+  }
+
+  .mobile-app-hero-fg {
+    inset: 0;
+  }
+
+  .mobile-app-hero-fg img {
+    object-position: center bottom;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mobile-app-hero {
+    --mobile-app-marquee-top: 6.5rem;
+    --mobile-app-marquee-height: clamp(2.25rem, 7.2vw, 3.15rem);
+    --mobile-app-marquee-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --mobile-app-marquee-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --mobile-app-marquee-gap: 1.25rem;
+    --mobile-app-tag-w: 16.625rem;
+    --mobile-app-tag-h: auto;
+    --mobile-app-tag-left-top: 50%;
+    --mobile-app-tag-right-top: 50%;
+    --mobile-app-tag-left-bottom: auto;
+    --mobile-app-tag-right-bottom: auto;
+    --mobile-app-tag-left-x: 1.25rem;
+    --mobile-app-tag-right-x: 1.25rem;
+    --mobile-app-tag-y: -50%;
+    --mobile-app-tag-icon: clamp(1.75rem, 8vw, 2.5rem);
+    --mobile-app-tag-icon-mark: clamp(0.85rem, 3.6vw, 1.15rem);
+    --mobile-app-tag-icon-radius: 0.4rem;
+    --mobile-app-tag-gap: 0.5rem;
+    --mobile-app-tag-pad-x: 0.65rem;
+    --mobile-app-tag-pad-y: 0.5rem;
+    --mobile-app-tag-radius: 0.65rem;
+    --mobile-app-tag-font: clamp(13px, 4.2vw, 18px);
+  }
+
+  .mobile-app-hero-fg {
+    inset: 7rem 0 0;
+  }
+
+  .mobile-app-hero-tag-chip {
+    container-type: inline-size;
+    min-height: 3.35rem;
+    max-width: calc(100vw - 1.5rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-app-hero {
+    --mobile-app-marquee-top: 6.75rem;
+    --mobile-app-marquee-size: clamp(1.45rem, 7vw, 2.2rem);
+    --mobile-app-marquee-height: clamp(1.9rem, 7.6vw, 2.6rem);
+    --mobile-app-marquee-line: clamp(1.9rem, 7.6vw, 2.6rem);
+    --mobile-app-tag-left-x: 0.75rem;
+    --mobile-app-tag-right-x: 0.75rem;
+    --mobile-app-tag-font: clamp(12px, 3.8vw, 16px);
+  }
+
+  .mobile-app-hero-tag-text {
+    font-size: clamp(12px, 3.8vw, 16px);
+  }
+
+  .mobile-app-hero-fg {
+    inset: 7.25rem 0 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .mobile-app-hero {
+    --mobile-app-tag-left-top: calc(50% - 4.6rem);
+    --mobile-app-tag-right-top: calc(50% + 0.7rem);
+    --mobile-app-tag-left-bottom: auto;
+    --mobile-app-tag-right-bottom: auto;
+    --mobile-app-tag-left-x: 50%;
+    --mobile-app-tag-right-x: auto;
+    --mobile-app-tag-right-left: 50%;
+    --mobile-app-tag-x: -50%;
+    --mobile-app-tag-y: 0px;
+  }
+}
+
+@media (max-width: 479px) {
+  .mobile-app-hero {
+    --mobile-app-marquee-top: 6.5rem;
+    --mobile-app-marquee-size: clamp(1.3rem, 6.6vw, 1.85rem);
+    --mobile-app-tag-font: clamp(12px, 4.1vw, 15px);
+  }
+
+  .mobile-app-hero-tag-text {
+    font-size: clamp(12px, 4.1vw, 15px);
+  }
+
+  .mobile-app-hero-fg {
+    inset: 7rem 0 0;
+  }
+}

@@ -1,0 +1,45 @@
+.wordpress-hero {
+  --wordpress-watermark-top: min(9.6042vw, 22.4074vh);
+  --wordpress-watermark-size: min(13.0208vw, 23.1481vh);
+  --wordpress-watermark-line: min(13.8021vw, 24.537vh);
+  --wordpress-watermark-gap: min(8.3333vw, 14.8148vh);
+}
+
+.wordpress-hero-copy {
+  z-index: 1;
+}
+
+.wordpress-hero-watermark {
+  margin: 0;
+  max-width: none;
+  color: rgba(255, 255, 255, 0.25);
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+@media (max-width: 1024px) {
+  .wordpress-hero {
+    height: 100dvh !important;
+    min-height: 100dvh;
+    --wordpress-watermark-top: 6.5rem;
+    --wordpress-watermark-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --wordpress-watermark-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --wordpress-watermark-gap: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .wordpress-hero {
+    --wordpress-watermark-top: 6.75rem;
+    --wordpress-watermark-size: clamp(1.45rem, 7vw, 2.2rem);
+    --wordpress-watermark-line: clamp(1.9rem, 7.6vw, 2.6rem);
+  }
+}
+
+@media (max-width: 479px) {
+  .wordpress-hero {
+    --wordpress-watermark-top: 6.5rem;
+    --wordpress-watermark-size: clamp(1.3rem, 6.6vw, 1.85rem);
+  }
+}

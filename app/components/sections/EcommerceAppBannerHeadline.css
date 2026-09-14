@@ -1,0 +1,45 @@
+.ecommerce-app-hero {
+  --ecommerce-watermark-top: min(4.9063vw, 16.0112vh);
+  --ecommerce-watermark-size: min(13.0208vw, 23.4082vh);
+  --ecommerce-watermark-line: min(13.0208vw, 23.4082vh);
+  --ecommerce-watermark-gap: min(8.3333vw, 14.9813vh);
+}
+
+.ecommerce-app-hero-copy {
+  z-index: 1;
+}
+
+.ecommerce-app-hero-watermark {
+  margin: 0;
+  max-width: none;
+  color: rgba(0, 0, 0, 0.05);
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+@media (max-width: 1024px) {
+  .ecommerce-app-hero {
+    height: 100dvh !important;
+    min-height: 100dvh;
+    --ecommerce-watermark-top: 6.5rem;
+    --ecommerce-watermark-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --ecommerce-watermark-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --ecommerce-watermark-gap: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .ecommerce-app-hero {
+    --ecommerce-watermark-top: 6.75rem;
+    --ecommerce-watermark-size: clamp(1.45rem, 7vw, 2.2rem);
+    --ecommerce-watermark-line: clamp(1.9rem, 7.6vw, 2.6rem);
+  }
+}
+
+@media (max-width: 479px) {
+  .ecommerce-app-hero {
+    --ecommerce-watermark-top: 6.5rem;
+    --ecommerce-watermark-size: clamp(1.3rem, 6.6vw, 1.85rem);
+  }
+}

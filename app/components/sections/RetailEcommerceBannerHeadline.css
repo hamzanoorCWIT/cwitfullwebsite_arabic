@@ -1,0 +1,123 @@
+.retail-ecommerce-hero {
+  --retail-ecommerce-watermark-top: min(5.5833vw, 17.037vh);
+  --retail-ecommerce-watermark-size: min(11.4583vw, 20.3704vh);
+  --retail-ecommerce-watermark-line: min(12.1875vw, 21.6667vh);
+  --retail-ecommerce-watermark-gap: min(7.2917vw, 12.963vh);
+  --retail-ecommerce-card-right: min(3.75vw, 6.6667vh);
+  --retail-ecommerce-card-bottom: min(11.0417vw, 19.6296vh);
+  --retail-ecommerce-card-w: min(25.3646vw, 45.0926vh);
+  --retail-ecommerce-card-icon: min(0.7335vw, 1.304vh);
+  --retail-ecommerce-card-pad-top: min(1.4583vw, 2.5926vh);
+  --retail-ecommerce-card-pad-x: min(1.6667vw, 2.963vh);
+  --retail-ecommerce-card-pad-bottom: min(1.875vw, 3.3333vh);
+  --retail-ecommerce-card-radius: min(0.9375vw, 1.6667vh);
+  --retail-ecommerce-card-copy-top: min(1.1458vw, 2.037vh);
+  --retail-ecommerce-card-font: min(0.9375vw, 1.6667vh);
+  --retail-ecommerce-card-line: min(1.4583vw, 2.5926vh);
+  --retail-ecommerce-card-x: 0px;
+  --retail-ecommerce-card-y: 0px;
+}
+
+.retail-ecommerce-hero-copy {
+  z-index: 1;
+}
+
+.retail-ecommerce-hero-copy-front {
+  z-index: 3;
+}
+
+.retail-ecommerce-hero-marquee {
+  z-index: 1;
+}
+
+.retail-ecommerce-hero-watermark {
+  margin: 0;
+  max-width: none;
+  color: #d5d5d5;
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: 0;
+  opacity: 0.22;
+}
+
+.retail-ecommerce-hero-card {
+  z-index: 4;
+}
+
+.retail-ecommerce-hero-card-inner {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(6, 46, 36, 0.42);
+  -webkit-backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(7.5px);
+}
+
+.retail-ecommerce-hero-card-mark {
+  display: block;
+  flex: none;
+  overflow: visible;
+}
+
+/* Size against the visible banner using the Figma 1109 × 1013 / 1920 × 1068
+   proportions, rather than the oversized background cover box. */
+.retail-ecommerce-hero .retail-ecommerce-hero-fg {
+  left: 0 !important;
+  top: auto !important;
+  bottom: 0;
+  width: 57.7604% !important;
+  height: 94.8502% !important;
+  transform: none !important;
+}
+
+.retail-ecommerce-hero .retail-ecommerce-hero-fg img {
+  object-fit: contain;
+  object-position: left bottom;
+}
+
+@media (max-width: 1024px) {
+  .retail-ecommerce-hero {
+    height: 100dvh !important;
+    min-height: 100dvh;
+    --retail-ecommerce-watermark-top: min(9.5833vw, 17.037vh);
+    --retail-ecommerce-watermark-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --retail-ecommerce-watermark-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --retail-ecommerce-watermark-gap: 1.25rem;
+    --retail-ecommerce-card-right: 1.25rem;
+    --retail-ecommerce-card-bottom: min(11.0417vw, 19.6296vh);
+    --retail-ecommerce-card-w: min(24rem, calc(100vw - 2.5rem));
+    --retail-ecommerce-card-pad-top: 1.25rem;
+    --retail-ecommerce-card-pad-x: 1.35rem;
+    --retail-ecommerce-card-pad-bottom: 1.6rem;
+    --retail-ecommerce-card-radius: 1rem;
+    --retail-ecommerce-card-copy-top: 0.9rem;
+    --retail-ecommerce-card-font: clamp(14px, 2.2vw, 17px);
+    --retail-ecommerce-card-line: 1.45;
+    --retail-ecommerce-card-icon: 14px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .retail-ecommerce-hero {
+    --retail-ecommerce-watermark-top: min(9.5833vw, 17.037vh);
+    --retail-ecommerce-watermark-size: clamp(1.45rem, 7vw, 2.2rem);
+    --retail-ecommerce-watermark-line: clamp(1.9rem, 7.6vw, 2.6rem);
+    --retail-ecommerce-card-right: 50%;
+    --retail-ecommerce-card-x: 50%;
+    --retail-ecommerce-card-w: min(21.5rem, calc(100vw - 1.5rem));
+    --retail-ecommerce-card-font: clamp(13px, 3.8vw, 15px);
+  }
+
+  .retail-ecommerce-hero-card {
+    bottom: 1rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .retail-ecommerce-hero {
+    --retail-ecommerce-watermark-size: clamp(1.3rem, 6.6vw, 1.85rem);
+  }
+}

@@ -1,0 +1,314 @@
+.marketing-app-hero {
+  --marketing-frame-w: 1920;
+  --marketing-frame-h: 1068;
+  --marketing-watermark-top: min(4.3958vw, 13.2959vh);
+  --marketing-watermark-size: min(13.0208vw, 23.4082vh);
+  --marketing-watermark-line: min(13.817vw, 24.8395vh);
+  --marketing-watermark-gap: min(8.3333vw, 14.9813vh);
+  --marketing-headline-top: calc(50% - min(4.526vw, 8.1461vh));
+  --marketing-headline-width: min(20.2083vw, 36.3296vh);
+  --marketing-headline-size: min(2.2396vw, 4.0262vh);
+  --marketing-headline-line: min(1.8229vw, 3.2772vh);
+  --marketing-kicker-top: min(10.3125vw, 18.5393vh);
+  --marketing-kicker-gap: min(0.5729vw, 1.0299vh);
+  --marketing-kicker-size: min(1.7708vw, 3.1835vh);
+  --marketing-kicker-line: min(3.125vw, 5.618vh);
+  --marketing-kicker-accent-size: min(5.9375vw, 10.6742vh);
+  --marketing-dot-size: min(0.7335vw, 1.3186vh);
+}
+
+.marketing-app-hero-copy {
+  z-index: 1;
+}
+
+.marketing-app-hero-watermark {
+  margin: 0;
+  max-width: none;
+  color: #eeeeee;
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.marketing-app-hero-headline {
+  position: absolute;
+  left: 50%;
+  top: var(--marketing-headline-top);
+  z-index: 2;
+  width: var(--marketing-headline-width);
+  margin: 0;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-family: var(--font-inter);
+  font-size: var(--marketing-headline-size);
+  font-weight: 700;
+  line-height: var(--marketing-headline-line);
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.marketing-app-hero-headline-in-lockup {
+  display: none;
+}
+
+.marketing-app-hero-lockup {
+  position: absolute;
+  left: 50%;
+  top: var(--marketing-kicker-top);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  transform: translateX(-50%);
+}
+
+.marketing-app-hero-kicker {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: var(--marketing-kicker-gap);
+  margin: 0;
+  overflow: visible;
+  color: #000000;
+  font-family: var(--font-inter);
+  font-size: var(--marketing-kicker-size);
+  font-weight: 600;
+  line-height: var(--marketing-kicker-line);
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.marketing-app-hero-kicker-dot {
+  display: block;
+  width: var(--marketing-dot-size);
+  height: var(--marketing-dot-size);
+  margin-bottom: min(1.25vw, 2.2472vh);
+  flex: none;
+  background: #0dfbc1;
+  clip-path: polygon(50% 0, 62% 34%, 100% 50%, 62% 66%, 50% 100%, 38% 66%, 0 50%, 38% 34%);
+}
+
+.marketing-app-hero-kicker-accent-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-end;
+  flex: none;
+}
+
+.marketing-app-hero-kicker-accent {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  color: #1b1269;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: var(--marketing-kicker-accent-size);
+  font-weight: 400;
+  line-height: 0.72;
+  text-transform: capitalize;
+}
+
+.marketing-app-hero-vector {
+  position: absolute;
+  left: 52%;
+  top: calc(var(--marketing-kicker-accent-size) * 0.55);
+  z-index: 0;
+  width: calc(var(--marketing-kicker-accent-size) * 5.95);
+  height: calc(var(--marketing-kicker-accent-size) * 2.11);
+  transform: translateX(-50%) rotate(-10.05deg);
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.marketing-app-hero-vector img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: fill;
+}
+
+@media (min-width: 1025px) {
+  .marketing-app-hero-lockup:not(:has(.marketing-app-hero-kicker)) {
+    top: var(--marketing-headline-top);
+    width: min(35.3385vw, 63.5487vh);
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    padding: min(2.8vw, 5.04vh) min(3.2vw, 5.76vh) min(3.4vw, 6.12vh);
+    transform: translate(-50%, -18%);
+  }
+
+  .marketing-app-hero-lockup:not(:has(.marketing-app-hero-kicker))
+    .marketing-app-hero-vector {
+    inset: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-10.05deg);
+  }
+
+  .marketing-app-hero-lockup:not(:has(.marketing-app-hero-kicker))
+    .marketing-app-hero-headline-in-lockup {
+    display: block;
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: var(--marketing-headline-width);
+    transform: none;
+  }
+
+  .marketing-app-hero-lockup:not(:has(.marketing-app-hero-kicker))
+    ~ .marketing-app-hero-headline-banner {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .marketing-app-hero {
+    height: 100dvh !important;
+    min-height: 100dvh;
+    --marketing-watermark-top: 6.5rem;
+    --marketing-watermark-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --marketing-watermark-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --marketing-watermark-gap: 1.25rem;
+    --marketing-kicker-size: clamp(0.92rem, 2.6vw, 1.35rem);
+    --marketing-kicker-line: 1.15;
+    --marketing-kicker-accent-size: clamp(2.35rem, 7.2vw, 3.6rem);
+    --marketing-kicker-gap: 0.28rem;
+    --marketing-dot-size: 0.62rem;
+    --marketing-headline-top: auto;
+    --marketing-headline-width: min(28rem, calc(100vw - 2.5rem));
+    --marketing-headline-size: clamp(1.4rem, 4.4vw, 2.2rem);
+    --marketing-headline-line: 1.15;
+  }
+
+  .marketing-app-hero-lockup {
+    top: 48%;
+    width: min(34rem, calc(100vw - 1.5rem));
+    max-width: calc(100vw - 1.5rem);
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    padding: clamp(1.8rem, 5.5vw, 3rem) clamp(1.15rem, 4.8vw, 2.6rem)
+      clamp(2.1rem, 6vw, 3.2rem);
+    transform: translate(-50%, -46%);
+  }
+
+  .marketing-app-hero-vector {
+    inset: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-7deg);
+  }
+
+  .marketing-app-hero-kicker {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.28em;
+    row-gap: 0.06em;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .marketing-app-hero-kicker-dot {
+    margin-bottom: 0.08em;
+  }
+
+  .marketing-app-hero-kicker-before,
+  .marketing-app-hero-kicker-after {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .marketing-app-hero-kicker-accent-wrap {
+    flex: 0 0 100%;
+    justify-content: center;
+    margin: 0.02em 0 0.12em;
+  }
+
+  .marketing-app-hero-headline-in-lockup {
+    display: block;
+    position: relative;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    transform: none;
+    font-size: clamp(1.05rem, 4.2vw, 1.7rem);
+    line-height: 1.12;
+  }
+
+  .marketing-app-hero-headline-banner {
+    display: none;
+  }
+
+  .marketing-app-hero-lockup:has(.marketing-app-hero-kicker)
+    .marketing-app-hero-headline-in-lockup {
+    display: none;
+  }
+
+  .marketing-app-hero-lockup:has(.marketing-app-hero-kicker)
+    ~ .marketing-app-hero-headline-banner {
+    display: block;
+    bottom: 10%;
+    top: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .marketing-app-hero {
+    --marketing-watermark-top: 6.75rem;
+    --marketing-watermark-size: clamp(1.45rem, 7vw, 2.2rem);
+    --marketing-watermark-line: clamp(1.9rem, 7.6vw, 2.6rem);
+    --marketing-kicker-size: clamp(0.8rem, 3.5vw, 1.05rem);
+    --marketing-kicker-accent-size: clamp(2.15rem, 11vw, 3.1rem);
+    --marketing-headline-width: min(20rem, calc(100vw - 2rem));
+    --marketing-headline-size: clamp(1.25rem, 5.8vw, 1.85rem);
+  }
+
+  .marketing-app-hero-lockup {
+    width: min(22.5rem, calc(100vw - 1.1rem));
+    max-width: calc(100vw - 1.1rem);
+    padding: clamp(1.55rem, 7vw, 2.4rem) clamp(0.9rem, 5.5vw, 1.6rem)
+      clamp(1.75rem, 7.5vw, 2.6rem);
+    transform: translate(-50%, -42%);
+  }
+
+  .marketing-app-hero-lockup:has(.marketing-app-hero-kicker)
+    ~ .marketing-app-hero-headline-banner {
+    bottom: 8%;
+  }
+}
+
+@media (max-width: 479px) {
+  .marketing-app-hero {
+    --marketing-watermark-top: 6.5rem;
+    --marketing-watermark-size: clamp(1.3rem, 6.6vw, 1.85rem);
+    --marketing-kicker-size: clamp(0.74rem, 3.7vw, 0.92rem);
+    --marketing-kicker-accent-size: clamp(1.95rem, 12.8vw, 2.55rem);
+    --marketing-headline-size: clamp(1.15rem, 5.4vw, 1.55rem);
+  }
+
+  .marketing-app-hero-lockup {
+    width: calc(100vw - 0.9rem);
+    max-width: calc(100vw - 0.9rem);
+    padding: 1.45rem 0.75rem 1.7rem;
+    transform: translate(-50%, -38%);
+  }
+
+  .marketing-app-hero-lockup:has(.marketing-app-hero-kicker)
+    ~ .marketing-app-hero-headline-banner {
+    bottom: 7.5%;
+  }
+}

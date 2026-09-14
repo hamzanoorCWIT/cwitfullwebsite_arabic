@@ -1,0 +1,117 @@
+.flutter-app-hero {
+  --flutter-watermark-top: min(10.5729vw, 18.8837vh);
+  --flutter-watermark-size: min(13.0208vw, 23.2558vh);
+  --flutter-watermark-line: min(13.817vw, 24.6782vh);
+  --flutter-watermark-gap: min(8.3333vw, 14.8837vh);
+  --flutter-card-left: min(387px, 20.1563vw);
+  --flutter-card-top: min(608px, 31.6667vw);
+  --flutter-card-w: min(485px, 25.2604vw);
+  --flutter-card-pad-top: min(27px, 1.4063vw);
+  --flutter-card-pad-right: min(36px, 1.875vw);
+  --flutter-card-pad-bottom: min(48px, 2.5vw);
+  --flutter-card-pad-left: min(29px, 1.5104vw);
+  --flutter-card-radius: min(20px, 1.0417vw);
+  --flutter-card-copy-top: min(28px, 1.4583vw);
+  --flutter-card-font: min(20px, 1.0417vw);
+  --flutter-card-line: min(30px, 1.5625vw);
+  --flutter-card-x: 0px;
+  --flutter-card-y: 0px;
+}
+
+.flutter-app-hero-copy {
+  z-index: 1;
+}
+
+.flutter-app-hero-watermark {
+  margin: 0;
+  max-width: none;
+  color: rgba(238, 238, 238, 0.11);
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.flutter-app-hero-card {
+  z-index: 3;
+}
+
+.flutter-app-hero-card-inner {
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(129, 112, 112, 0.07);
+  -webkit-backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(7.5px);
+}
+
+.flutter-app-hero-card-mark {
+  display: block;
+  width: min(14.083px, 0.7335vw);
+  height: min(14.083px, 0.7335vw);
+  max-width: none;
+}
+
+.flutter-app-hero-card-text {
+  max-width: 100%;
+}
+
+.flutter-app-hero .flutter-app-hero-fg {
+  inset: auto 0 0 auto;
+  width: min(1401px, 72.9688vw);
+  aspect-ratio: 1401 / 934;
+  height: auto;
+}
+
+.flutter-app-hero .flutter-app-hero-fg img {
+  object-position: right bottom;
+}
+
+@media (max-width: 1024px) {
+  .flutter-app-hero {
+    height: 100dvh !important;
+    min-height: 100dvh;
+    --flutter-watermark-top: 6.5rem;
+    --flutter-watermark-size: clamp(1.7rem, 6.8vw, 2.85rem);
+    --flutter-watermark-line: clamp(2.25rem, 7.2vw, 3.15rem);
+    --flutter-watermark-gap: 1.25rem;
+    --flutter-card-left: 1.25rem;
+    --flutter-card-top: auto;
+    --flutter-card-w: min(27rem, calc(100vw - 2.5rem));
+    --flutter-card-pad-top: 1.35rem;
+    --flutter-card-pad-right: 1.45rem;
+    --flutter-card-pad-bottom: 2rem;
+    --flutter-card-pad-left: 1.45rem;
+    --flutter-card-radius: 1.1rem;
+    --flutter-card-copy-top: 1rem;
+    --flutter-card-font: clamp(14px, 2.2vw, 18px);
+    --flutter-card-line: 1.45;
+  }
+
+  .flutter-app-hero-card {
+    bottom: 1.5rem;
+  }
+
+  .flutter-app-hero-card-mark {
+    height: 14px;
+    width: 14px;
+  }
+
+  .flutter-app-hero .flutter-app-hero-fg {
+    inset: auto 0 0 auto;
+  }
+}
+
+@media (max-width: 639px) {
+  .flutter-app-hero {
+    --flutter-watermark-top: 6.5rem;
+    --flutter-watermark-size: clamp(1.3rem, 6.6vw, 1.85rem);
+    --flutter-card-left: 50%;
+    --flutter-card-x: -50%;
+    --flutter-card-w: min(21.5rem, calc(100vw - 1.5rem));
+    --flutter-card-font: clamp(13px, 3.8vw, 15px);
+  }
+
+  .flutter-app-hero-card {
+    bottom: 1rem;
+  }
+}
